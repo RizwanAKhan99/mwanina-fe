@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: mwaninfa-fe-application
+  name: fe-root
   namespace: devops
 spec:
   project: default
