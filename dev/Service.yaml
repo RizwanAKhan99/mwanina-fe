@@ -3,8 +3,8 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    app: mwanina-frontend
-  name: mwanina-frontend
+    app: mwanina-fe
+  name: mwanina-fe
 spec:
   ports:
   - name: 80-8080
@@ -16,7 +16,7 @@ spec:
     port: 443
     targetPort: 5173
   selector:
-    app: mwanina-frontend
+    app: mwanina-fe
   type: LoadBalancer
 status:
   loadBalancer: {}
