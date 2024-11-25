@@ -3,22 +3,22 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: mwanina-fe
-  name: mwanina-fe
+    app: fe-root
+  name: fe-root
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mwanina-fe
+      app: fe-root
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: mwanina-fe
+        app: fe-root
     spec:
       containers:
-      - image: image-registry.openshift-image-registry.svc:5000/devops/mwanina-fe
-        name: mwanina-fe
+      - image: image-registry.openshift-image-registry.svc:5000/devops/fe-root
+        name: fe-root
         securityContext:
           runAsUser: 1000680000
           runAsGroup: 1000680000
