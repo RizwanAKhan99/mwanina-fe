@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: mwanina-frontend
+  name: mwanina-frontend
+spec:
+  ports:
+  - name: 80-8080
+    port: 80
+    protocol: TCP
+    targetPort: 5173
+  - name: https
+    protocol: TCP
+    port: 443
+    targetPort: 5173
+  selector:
+    app: mwanina-frontend
+  type: LoadBalancer
+status:
+  loadBalancer: {}
+  

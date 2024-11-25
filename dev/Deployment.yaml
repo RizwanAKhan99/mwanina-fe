@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: mwanina-frontend
+  name: mwanina-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mwanina-frontend
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: mwanina-frontend
+    spec:
+      containers:
+      - image: image-registry.openshift-image-registry.svc:5000/devops/fe:latest
+        name: mwanina-frontend
+        securityContext:
+          runAsUser: 1000680000
+          runAsGroup: 1000680000

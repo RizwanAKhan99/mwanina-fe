@@ -1,0 +1,16 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: mwanina-frontend
+  namespace: devops
+spec:
+  host: mwanina-devops.apps.stgocp.mwanitest.local
+  to:
+    kind: Service
+    name: mwanina-frontend
+    weight: 100
+  port:
+    targetPort: 5173
+  tls:
+    termination: edge
+  wildcardPolicy: None
